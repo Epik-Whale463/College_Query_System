@@ -1,0 +1,8 @@
+Flask
+langchain
+qdrant-client
+langchain-nvidia-ai-endpoints
+python-dotenv
+langchain-community
+gunicorn
+fcntl
