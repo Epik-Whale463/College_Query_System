@@ -2,6 +2,13 @@
 
 **A Flask-based web application for handling college-related queries with RAG (Retrieval-Augmented Generation) implementation.**
 
+Chat interface
+![image](https://github.com/user-attachments/assets/e2fbaaea-91a5-479c-9e88-d92dd643d451)
+
+Login page
+![image](https://github.com/user-attachments/assets/7d8d7c4b-32b3-46d1-ae55-83030fff6e5f)
+
+
 ## Features
 
 - **User Authentication System**
