@@ -1,2 +1,4 @@
 __pycache__
 myenv/
+python_modules/users.txt
+.env

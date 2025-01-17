@@ -1,0 +1,59 @@
+DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING – AI & ML
+III B. Tech II SEM PROJECT ACTION PLAN (A.Y: 2024-25)
+
+I. Overall Schedule and Key Dates
+
+Date of Document: December 13, 2024
+Academic Year: 2024-25
+Semester: III B. Tech II SEM
+II. Project Milestones and Deadlines
+
+Milestone	Effective Dates	Remarks
+Submission of Abstracts	Dec 16-20, 2024	- Abstract should clearly state the project's main objective, rationale, and methodology.<br> - Submitted to the Project Coordinator, signed by the Project Guide.
+Review - 1	Jan 20-24, 2025	- Detailed insight into the project: existing systems, proposed system.<br> - 1/3 of features implemented and deployed.<br> - Tools used.<br> - Presentation via Deployed URL only.
+Review - 2	Feb 17-21, 2025	- Progress report on 50% completion of project modules.<br> - Coding and execution demonstrated.<br> - Presentation via Deployed URL only.
+Review - 3	Mar 17-21, 2025	- Progress report on 90% completion of project modules.<br> - Coding and execution demonstrated.<br> - Presentation via Deployed URL only.
+Internal Viva-Voice	Mar 20-22, 2025	- Complete project execution with results.<br> - Analysis of work and future scope.<br> - Presentation via Deployed URL only.
+Submission of Drafted Documentation	Mar 29, 2025	- Draft copy of project documentation (minimum 50 pages).<br> - Submitted to the guide for verification.
+Submission of Bounded Project Documentation	Apr 07-11, 2025	- Final bounded copies in the format prescribed by the Department of CSM & AIM.<br> - Submitted to the Guide for certification.
+
+III. Important Notes and Guidelines
+
+Topic Selection:
+
+Project topics must align with the Guide's research interests/approval within the concerned research group.
+Abstracts must be duly signed by the guide.
+Presentation Requirements:
+
+Reviews must be presented using the institute's PowerPoint template.
+Presentations should be concise (less than 15 slides).
+All demonstrations of the project's progress (code, execution, results) must be done through a Deployed URL only.
+IV. Submission of Abstracts (Review 0) - Specific Details
+
+Date: December 20, 2024
+Sections/Batches: CSM –(A,B,C,AIM)
+Panels:
+Panel 1: Batches 1-4, Batches 9-13
+Panel 2: Batches 5-8, Batches 14-17
+Required for Submission:
+Proposed System
+Abstract
+Literature Review (Base Papers)
+Figma Design
+Deployed URL of the Proposed System with Logins
+V. Project Coordinators and Panels
+
+Panel 1:
+Dr. T. Kameswara Rao
+Mr. B. Pardha Saradhi
+
+Panel 2:
+Dr. SLVVD. Sarma
+Mr. K. Gnanendra
+VI. Signatories
+
+Project Coordinator
+HOD-CSM & AIM
+VII. Remarks of the Guide on the Review:
+
+Space is provided on the document for the Guide to add their remarks after the Review 0.

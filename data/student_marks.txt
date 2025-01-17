@@ -1,0 +1,435 @@
+Year-3 , Semester-5
+Semester results
+
+
+Hall Ticket No: 22BQ1A42B9
+Name: PENUMUDI CHETAN MANI KRISHNA
+Achieved B grades in Automata Theory and Compiler Design, Computer Networks, Artificial Neural Networks, and Image Processing Using Python. Scored D in Machine Learning and excelled in practicals, achieving A+ in UNIX and Shell Programming Lab and .NET Programming, with an A in Machine Learning Lab. Completed a Summer Internship with an A grade and passed Life Skills V and Constitution of India. Overall SGPA: 8.19, with a "Pass" status for the semester.
+
+
+HallTicket No: 22BQ1A42C0
+Name: PERASOMULA CHANDANA
+Achieved B grades in Automata Theory and Compiler Design, Computer Networks, Artificial Neural Networks. Scored C in Machine Learning and excelled in practicals, achieving A+ in UNIX and Shell Programming Lab, Machine Learning Lab, and .NET Programming. Completed a Summer Internship with an A+ grade and passed Life Skills V and Constitution of India. Overall SGPA: 8.53, with a "Pass" status for the semester.
+
+HallTicket No: 22BQ1A42C1
+Name: PERLI NOEL
+Achieved B grades in Automata Theory and Compiler Design, Machine Learning, Computer Networks, and Artificial Neural Networks. Scored A in Image Processing Using Python, A+ in UNIX and Shell Programming Lab, B in Machine Learning Lab, A in .NET Programming, and A in Summer Internship. Passed Life Skills V and Constitution of India. Overall SGPA: 8.44, with a "Pass" status for the semester.
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42C2
+Name: PISUPATI VEDA RAMA CHARAN
+Grades: Automata Theory and Compiler Design - C, Machine Learning - C, Computer Networks - C, Artificial Neural Networks - C, Image Processing Using Python - A, UNIX and Shell Programming Lab - A+, Machine Learning Lab - C, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.98
+
+
+HallTicket No: 22BQ1A42C3
+Name: PONDURI VENKATA BRAHMA SAI KOWSHIK
+Grades: Automata Theory and Compiler Design - B, Machine Learning - C, Computer Networks - B, Artificial Neural Networks - C, Image Processing Using Python - B, UNIX and Shell Programming Lab - A, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.95
+
+HallTicket No: 22BQ1A42C4
+Name: PONNAPALLI CHANDRA KIRAN
+Grades: Automata Theory and Compiler Design - A, Machine Learning - B, Computer Networks - B, Artificial Neural Networks - A, Image Processing Using Python - A, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.79
+
+HallTicket No: 22BQ1A42C5
+Name: PONNURU YASASWINI
+Grades: Automata Theory and Compiler Design - A, Machine Learning - C, Computer Networks - A, Artificial Neural Networks - A, Image Processing Using Python - A+, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 9.02
+
+HallTicket No: 22BQ1A42C6
+Name: PULIKONAM BHARGAV REDDY
+Grades: Automata Theory and Compiler Design - C, Machine Learning - C, Computer Networks - C, Artificial Neural Networks - A, Image Processing Using Python - D, UNIX and Shell Programming Lab - A, Machine Learning Lab - C, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.6
+
+HallTicket No: 22BQ1A42C7
+Name: PULIPAKA DHARANI
+Grades: Automata Theory and Compiler Design - B, Machine Learning - C, Computer Networks - D, Artificial Neural Networks - B, Image Processing Using Python - A, UNIX and Shell Programming Lab - A+, Machine Learning Lab - C, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.95
+
+HallTicket No: 22BQ1A42C8
+Name: PULLA JOHN STEPHEN
+Grades: Automata Theory and Compiler Design - D, Machine Learning - E, Computer Networks - E, Artificial Neural Networks - D, Image Processing Using Python - C, UNIX and Shell Programming Lab - A, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 6.7
+
+HallTicket No: 22BQ1A42C9
+Name: PULUSU LAKSHMI SIRI
+Grades: Automata Theory and Compiler Design - A, Machine Learning - B, Computer Networks - B, Artificial Neural Networks - A, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.74
+
+HallTicket No: 22BQ1A42D0
+Name: PURNI SUBRAMANYAM
+Grades: Automata Theory and Compiler Design - C, Machine Learning - D, Computer Networks - D, Artificial Neural Networks - B, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A+, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.91
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42D1
+Name: RAMARAJU H V S S ABHIGNA
+Grades: Automata Theory and Compiler Design - B, Machine Learning - B, Computer Networks - C, Artificial Neural Networks - B, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.33
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42D2
+Name: RAVEENA SINGH TUMKURI
+Grades: Automata Theory and Compiler Design - A, Machine Learning - C, Computer Networks - C, Artificial Neural Networks - A, Image Processing Using Python - A, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.67
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42D3
+Name: SANGAPU NAGA TEJASWI
+Grades: Automata Theory and Compiler Design - A, Machine Learning - C, Computer Networks - B, Artificial Neural Networks - A, Image Processing Using Python - A, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.81
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42D4
+Name: SEELAM ABHINAV SAHAT
+Grades: Automata Theory and Compiler Design - B, Machine Learning - C, Computer Networks - B, Artificial Neural Networks - A, Image Processing Using Python - A, UNIX and Shell Programming Lab - A+, Machine Learning Lab - C, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.37
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42D5
+Name: SHAIK BAJI BABU
+Grades: Automata Theory and Compiler Design - C, Machine Learning - E, Computer Networks - F, Artificial Neural Networks - D, Image Processing Using Python - D, UNIX and Shell Programming Lab - A, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Fail
+SGPA: 6.07
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42D6
+Name: SHAIK HAMIDHA
+Grades: Automata Theory and Compiler Design - E, Machine Learning - D, Computer Networks - D, Artificial Neural Networks - C, Image Processing Using Python - B, UNIX and Shell Programming Lab - A, Machine Learning Lab - C, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Not Completed
+Pass/Fail: Fail
+SGPA: 7.05
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42D7
+Name: SHAIK HARSHIYA SAMEERA
+Grades: Automata Theory and Compiler Design - B, Machine Learning - B, Computer Networks - C, Artificial Neural Networks - B, Image Processing Using Python - A+, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.6
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42D8
+Name: SHAIK IMRAN
+Grades: Automata Theory and Compiler Design - E, Machine Learning - C, Computer Networks - D, Artificial Neural Networks - C, Image Processing Using Python - B, UNIX and Shell Programming Lab - A, Machine Learning Lab - C, .NET Programming - B, Summer Internship - B
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.02
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42D9
+Name: SHAIK KAREEM PASHA
+Grades: Automata Theory and Compiler Design - D, Machine Learning - D, Computer Networks - D, Artificial Neural Networks - C, Image Processing Using Python - B, UNIX and Shell Programming Lab - A, Machine Learning Lab - C, .NET Programming - A, Summer Internship - B
+Life Skills V and Constitution of India: Not Completed
+Pass/Fail: Fail
+SGPA: 7.12
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42E0
+Name: SHAIK MYHFUZ
+Grades: Automata Theory and Compiler Design - D, Machine Learning - D, Computer Networks - F, Artificial Neural Networks - C, Image Processing Using Python - B, UNIX and Shell Programming Lab - A, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Fail
+SGPA: 6.42
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42E1
+Name: SHAIK NOUMAN
+Grades: Automata Theory and Compiler Design - B, Machine Learning - B, Computer Networks - C, Artificial Neural Networks - B, Image Processing Using Python - A, UNIX and Shell Programming Lab - A, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.23
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42E2
+Name: SHAIK SADIYA
+Grades: Automata Theory and Compiler Design - C, Machine Learning - C, Computer Networks - B, Artificial Neural Networks - B, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.19
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42E3
+Name: SHAIK SAMEER MINAHAJ
+Grades: Automata Theory and Compiler Design - C, Machine Learning - D, Computer Networks - C, Artificial Neural Networks - B, Image Processing Using Python - B, UNIX and Shell Programming Lab - A, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.67
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42E4
+Name: SHAIK SHAHANA
+Grades: Automata Theory and Compiler Design - C, Machine Learning - C, Computer Networks - B, Artificial Neural Networks - C, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.95
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42E5
+Name: SHAIK YESWANTH
+Grades: Automata Theory and Compiler Design - A, Machine Learning - B, Computer Networks - A, Artificial Neural Networks - A, Image Processing Using Python - A, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 9.09
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42E6
+Name: SHAIK ZAHIRA
+Grades: Automata Theory and Compiler Design - C, Machine Learning - C, Computer Networks - B, Artificial Neural Networks - B, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.26
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42E7
+Name: SIDDABATHUNI SRI PUJITHA
+Grades: Automata Theory and Compiler Design - B, Machine Learning - A, Computer Networks - B, Artificial Neural Networks - A, Image Processing Using Python - A, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.79
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42E8
+Name: SISTLA BHAVANA
+Grades: Automata Theory and Compiler Design - B, Machine Learning - B, Computer Networks - B, Artificial Neural Networks - B, Image Processing Using Python - A, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.51
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42E9
+Name: SK RIHANA
+Grades: Automata Theory and Compiler Design - A, Machine Learning - A, Computer Networks - B, Artificial Neural Networks - B, Image Processing Using Python - A, UNIX and Shell Programming Lab - A, Machine Learning Lab - A, .NET Programming - A+, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.81
+Note: *CP- Completed *NCP-Not Completed
+Note: Last date for Recounting/Revaluation/Challenge by Revaluation is 09-01-2025
+
+HallTicket No: 22BQ1A42F0
+Name: SURE ABHINAYA JYOTHI
+Grades: Automata Theory and Compiler Design - F, Machine Learning - E, Computer Networks - E, Artificial Neural Networks - E, Image Processing Using Python - E, UNIX and Shell Programming Lab - A, Machine Learning Lab - C, .NET Programming - B, Summer Internship - B
+Life Skills V and Constitution of India: Not Completed
+Pass/Fail: Fail
+SGPA: 5.21
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42F1
+Name: TADIBOINA BHANUSREE
+Grades: Automata Theory and Compiler Design - B, Machine Learning - B, Computer Networks - B, Artificial Neural Networks - A, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.51
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42F2
+Name: THAKKELLAPATI MADHU CHANDANA DEVI
+Grades: Automata Theory and Compiler Design - B, Machine Learning - B, Computer Networks - B, Artificial Neural Networks - A, Image Processing Using Python - A, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A+, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.74
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42F3
+Name: TANYA YADAV
+Grades: Automata Theory and Compiler Design - B, Machine Learning - D, Computer Networks - B, Artificial Neural Networks - B, Image Processing Using Python - B, UNIX and Shell Programming Lab - A, Machine Learning Lab - A, .NET Programming - A, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.09
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42F4
+Name: TEEGURI VYSHNAVI
+Grades: Automata Theory and Compiler Design - C, Machine Learning - C, Computer Networks - C, Artificial Neural Networks - A, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A+, .NET Programming - A, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.23
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42F5
+Name: TELLAGORLA YALLAMANDA
+Grades: Automata Theory and Compiler Design - E, Machine Learning - E, Computer Networks - E, Artificial Neural Networks - F, Image Processing Using Python - E, UNIX and Shell Programming Lab - A, Machine Learning Lab - C, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Fail
+SGPA: 5.37
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42F6
+Name: THOTA NAVYA SRI
+Grades: Automata Theory and Compiler Design - B, Machine Learning - B, Computer Networks - C, Artificial Neural Networks - B, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.33
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42F7
+Name: THOTA NIKITHA SREE
+Grades: Automata Theory and Compiler Design - A, Machine Learning - A+, Computer Networks - B, Artificial Neural Networks - A, Image Processing Using Python - A+, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 9.37
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42F8
+Name: THOTA SRI KUMAR
+Grades: Automata Theory and Compiler Design - C, Machine Learning - C, Computer Networks - D, Artificial Neural Networks - D, Image Processing Using Python - D, UNIX and Shell Programming Lab - A, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.12
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42F9
+Name: TIRUMALA GANGA BHAVANI
+Grades: Automata Theory and Compiler Design - C, Machine Learning - C, Computer Networks - C, Artificial Neural Networks - C, Image Processing Using Python - C, UNIX and Shell Programming Lab - A, Machine Learning Lab - A, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.6
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42G0
+Name: TIYYAGURA AYYAPPA REDDY
+Grades: Automata Theory and Compiler Design - D, Machine Learning - D, Computer Networks - C, Artificial Neural Networks - C, Image Processing Using Python - C, UNIX and Shell Programming Lab - A, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.33
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42G1
+Name: TULLIMILLI DEVINADH
+Grades: Automata Theory and Compiler Design - F, Machine Learning - D, Computer Networks - D, Artificial Neural Networks - E, Image Processing Using Python - E, UNIX and Shell Programming Lab - A, Machine Learning Lab - C, .NET Programming - B, Summer Internship - B
+Life Skills V and Constitution of India: Not Completed
+Pass/Fail: Fail
+SGPA: 5.49
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42G2
+Name: TUMMALA MANISH REDDY
+Grades: Automata Theory and Compiler Design - E, Machine Learning - F, Computer Networks - D, Artificial Neural Networks - D, Image Processing Using Python - E, UNIX and Shell Programming Lab - A, Machine Learning Lab - C, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Not Completed
+Pass/Fail: Fail
+SGPA: 5.65
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42G3
+Name: TUMMIDI KESAVA SAI PRIYA
+Grades: Automata Theory and Compiler Design - A, Machine Learning - B, Computer Networks - A, Artificial Neural Networks - A, Image Processing Using Python - A+, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 9.23
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42G4
+Name: UPPUTURI SRI SATVIKI
+Grades: Automata Theory and Compiler Design - B, Machine Learning - A, Computer Networks - C, Artificial Neural Networks - B, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.37
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42G5
+Name: VAIDANA ANILKUMAR
+Grades: Automata Theory and Compiler Design - B, Machine Learning - C, Computer Networks - C, Artificial Neural Networks - C, Image Processing Using Python - C, UNIX and Shell Programming Lab - A, Machine Learning Lab - C, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Not Completed
+Pass/Fail: Fail
+SGPA: 7.6
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42G6
+Name: VANGA SRUJANA
+Grades: Automata Theory and Compiler Design - A, Machine Learning - B, Computer Networks - B, Artificial Neural Networks - B, Image Processing Using Python - A+, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.79
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42G7
+Name: VANUKURU NIKHIL SATYA
+Grades: Automata Theory and Compiler Design - D, Machine Learning - C, Computer Networks - E, Artificial Neural Networks - C, Image Processing Using Python - D, UNIX and Shell Programming Lab - A, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Not Completed
+Pass/Fail: Fail
+SGPA: 6.98
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42G8
+Name: VEDANTAM SATVIK SRIVATSAVA
+Grades: Automata Theory and Compiler Design - B, Machine Learning - B, Computer Networks - D, Artificial Neural Networks - B, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A+
+Life Skills V and Constitution of India: Not Completed
+Pass/Fail: Fail
+SGPA: 8.09
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42G9
+Name: VELPURI SRAVYA
+Grades: Automata Theory and Compiler Design - F, Machine Learning - E, Computer Networks - E, Artificial Neural Networks - E, Image Processing Using Python - E, UNIX and Shell Programming Lab - A, Machine Learning Lab - C, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Not Completed
+Pass/Fail: Fail
+SGPA: 5.37
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42H0
+Name: VEMULA VIJAY KUMAR
+Grades: Automata Theory and Compiler Design - C, Machine Learning - C, Computer Networks - D, Artificial Neural Networks - C, Image Processing Using Python - D, UNIX and Shell Programming Lab - A+, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Not Completed
+Pass/Fail: Fail
+SGPA: 7.33
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42H1
+Name: YAKASIRI SIVA KUMAR
+Grades: Automata Theory and Compiler Design - B, Machine Learning - C, Computer Networks - D, Artificial Neural Networks - C, Image Processing Using Python - C, UNIX and Shell Programming Lab - A, Machine Learning Lab - B, .NET Programming - A, Summer Internship - A
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 7.53
+Note: *CP- Completed *NCP-Not Completed
+
+HallTicket No: 22BQ1A42H2
+Name: YAMARTHI MOUNIKA
+Grades: Automata Theory and Compiler Design - B, Machine Learning - B, Computer Networks - B, Artificial Neural Networks - B, Image Processing Using Python - B, UNIX and Shell Programming Lab - A+, Machine Learning Lab - A+, .NET Programming - A+, Summer Internship - A+
+Life Skills V and Constitution of India: Completed
+Pass/Fail: Pass
+SGPA: 8.6
+Note: *CP- Completed *NCP-Not Completed
+
+Hall Ticket No: 22BQ1A42H3
+Name: YELISETTI VENKATA GURU MAHESH
+Earned B grades in Automata Theory and Compiler Design and C grades in Machine Learning and Computer Networks. Achieved D in Artificial Neural Networks and excelled in Image Processing Using Python with an A grade. Scored A+ in UNIX and Shell Programming Lab, Machine Learning Lab, .NET Programming, and Summer Internship. Passed Life Skills V and Constitution of India with a "Pass" status and an overall SGPA of 8.05.
+
+Hall Ticket No: 22BQ1A42H4
+Name: YELURI NAGA NITISH SATHYA ROHITH
+Achieved A in Automata Theory and Compiler Design, B in Machine Learning, Artificial Neural Networks, and Image Processing Using Python, and C in Computer Networks. Scored A+ in UNIX and Shell Programming Lab, .NET Programming, and Summer Internship and B in Machine Learning Lab. Passed Life Skills V and Constitution of India with an overall SGPA of 8.47, and a "Pass" status.
+
+Hall Ticket No: 22BQ1A42H5
+Name: YEMINENI BHAVYA SRI
+Achieved B grades in Automata Theory and Compiler Design, Computer Networks, Artificial Neural Networks, and D in Machine Learning. Scored A in Image Processing Using Python and Machine Learning Lab, and A+ in UNIX and Shell Programming Lab, .NET Programming, and Summer Internship. Passed Life Skills V and Constitution of India with an overall SGPA of 8.4, and a "Pass" status.
+
+Hall Ticket No: 22BQ1A42H6
+Name: YENUGANTI NAVEEN
+Earned C grades in Automata Theory and Compiler Design, Machine Learning, Computer Networks, and Artificial Neural Networks, and B in Image Processing Using Python. Scored A+ in UNIX and Shell Programming Lab, B in Machine Learning Lab, and A in .NET Programming and Summer Internship. Completed Constitution of India but did not complete Life Skills V, resulting in a "Fail" status with an SGPA of 7.74.

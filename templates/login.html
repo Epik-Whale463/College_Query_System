@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        :root {
+    --primary-bg: #0a0b1e;
+    --secondary-bg: #151631;
+    --accent-color: #6e4ff6;
+    --text-primary: #ffffff;
+    --text-secondary: #b8b9e3;
+    --border-color: #2a2b57;
+    --button-hover: #8d76ff;
+    --shadow-sm: 0 2px 4px rgba(110, 79, 246, 0.1);
+    --shadow-md: 0 4px 8px rgba(110, 79, 246, 0.2);
+    --shadow-lg: 0 8px 16px rgba(110, 79, 246, 0.3);
+    --transition: all 0.2s ease;
+    --error-color: #ff6b6b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-image: 
+        radial-gradient(circle at top right, rgba(110, 79, 246, 0.1), transparent),
+        radial-gradient(circle at bottom left, rgba(78, 56, 173, 0.1), transparent);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.025em;
+    text-shadow: 0 0 15px rgba(110, 79, 246, 0.5);
+    text-align: center;
+}
+
+form {
+    background-color: var(--secondary-bg);
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    margin-top: -0.25rem;
+}
+
+input {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(110, 79, 246, 0.1);
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    border: none;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.auth-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.auth-links a:hover {
+    color: var(--button-hover);
+    text-decoration: underline;
+}
+
+[style*="color: red"] {
+    color: var(--error-color) !important;
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h1><i>Experience Data at Fingertips</i><p style="font-size:medium"><i>Beta release</i></p></h1>
+        {% if error %}
+            <p class="alert alert-danger">{{ error }}</p>
+        {% endif %}
+        <form method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <p class="form-text">Only college mail (@vvit.net) is allowed</p>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <button type="submit" class="auth-button">Login</button>
+        </form>
+        
+        <div class="auth-links">
+            Don't have an account? <a href="/register"><i><b>Register here</b></i></a>
+        </div>
+    </div>
+</body>
+<footer>
+    <div style="text-align: center; padding: 1rem; color: var(--text-secondary);">
+        Created by Rama Charan <br>
+        <i><b>Exclusive for CSM Students</b></i>
+    </div>
+</footer>
+</html>

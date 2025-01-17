@@ -1,0 +1,223 @@
+III- Year II- Semester Syllabus
+
+Course Name: Deep Learning
+
+Units:
+
+Unit I: Deep Learning Basics
+
+Introduction, perceptron, overfitting and generalization, linear perceptron, learning XOR function with non-linear functions, feedforward neural networks, activation functions, loss functions, backpropagation.
+Unit II: Optimization
+
+Challenges in neural network optimization, regularization, gradient descent, stochastic gradient descent, momentum optimizer, AdaGrad, RMSProp, Adam, batch normalization.
+Unit III: Deep Learning for Computer Vision
+
+Building blocks of CNN, local receptive fields, shared weights and bias, stride, pooling layers (max-pooling, average pooling), CNN for image classification (AlexNet, VGG, GoogleNet, ResNet), CNN for segmentation (Unet).
+Unit IV: Effective Training of Deep Neural Networks
+
+Early stopping, dropout, instance normalization, group normalization, transfer learning, data augmentation.
+Unit V: Deep Learning for Natural Language Processing
+
+Computational representation of language, one-hot representation, word vectors (skip-gram word2vec, CBOW word2vec), word vector arithmetic, RNN, LSTM.
+
+
+Text Books 
+1. Deep Learning- Ian Goodfellow, Yoshua Benjio, Aaron Courville, The MIT Press 
+2. Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition - 
+Aurélien Géron, O'Reilly Media, Inc. ISBN: 9781492032649 
+3. Pattern Classification- Richard O. Duda, Peter E. Hart, David G. Stork, John Wiley & Sons 
+Inc.
+
+=======
+
+
+Course Name: Natural Language Processing
+
+Units:
+
+Unit I: Introduction and Overview
+
+Motivations and fundamentals of NLP; ambiguity and uncertainty in language; Turing test; NLP representations in syntax, semantics, and pragmatics; applications of NLP; role of Deep Learning in NLP; Deep Learning for Natural Language Computing: backpropagation, recurrent neural networks, transformers.
+Unit II: Syntactic Parsing and Semantic Analysis
+
+Grammar formalisms and tree banks; efficient parsing for context-free grammars (CFGs); statistical parsing and probabilistic CFGs (PCFGs); lexicalized PCFGs; lexical semantics and word-sense disambiguation; compositional semantics; semantic role labeling and semantic parsing.
+Unit III: N-gram Language Models and Sequence Labeling
+
+Role of language models; simple N-gram models; parameter estimation and smoothing; evaluating language models; part-of-speech tagging and sequence labeling; lexical syntax; Hidden Markov Models (Forward and Viterbi algorithms, EM training).
+Unit IV: Deep Learning and Text Embedding
+
+Deep learning for named entity recognition and dependency parsing; gradient checks, overfitting, regularization, activation functions; multi-task and semi-supervised learning; word vector representations (word2vec, GloVe); advanced word vector representations; sequence-to-sequence model.
+Unit V: Information Extraction and Machine Translation
+
+Named entity recognition and relation extraction; IE using sequence labeling; basic issues in machine translation; statistical translation; word alignment; phrase-based translation; synchronous grammars.
+
+Text Books 
+1. Manning, Christopher and Heinrich, Schutze, Foundations of Statistical Natural Language 
+Processing, MIT Press, 1999.
+
+=======
+
+Course Name: Engineering Economics & Management
+
+Units:
+
+Unit I: Introduction to Economics
+
+Definitions, nature, and scope; difference between microeconomics and macroeconomics; concept and types of demand; determinants and law of demand; elasticity of demand and its types.
+Theory of production: production function, law of variable proportions, law of returns to scale.
+Cost: meaning, short-run and long-run costs, fixed cost, variable cost, total cost, average cost, marginal cost, opportunity cost.
+Break-even analysis: meaning, explanation, and simple problems.
+Unit II: Markets, National Income, and Banking
+
+Markets: meaning, types (perfect competition, monopoly, monopolistic competition, oligopoly) and their characteristics.
+National Income: GNP, GDP, NNP, NDP, personal income, and GST (Goods & Services Tax).
+Money: meaning, functions, and types; monetary policy (meaning, objectives, tools); fiscal policy (meaning, objectives, tools).
+Banking: meaning, types, and functions; Central Bank (RBI) and its functions; concepts like CRR, bank rate, repo rate, reverse repo rate, and SLR.
+Unit III: Management Concepts
+
+Nature and importance of management; functions and principles of management.
+Human Resource Management: meaning and difference between personnel management and HR management; functions of HR management.
+Marketing Management: functions of marketing, marketing strategies based on the product life cycle, and channels of distribution.
+Unit IV: Accounting and Project Management
+
+Introduction to double entry system: journal, ledger, trial balance, and preparation of final accounts with adjustments.
+Preparation of financial statements.
+Project Management (PERT/CPM): development of network, difference between PERT and CPM, identifying critical path (simple problems).
+Unit V: Capital Budgeting
+
+Meaning of capital and capitalization; meaning of capital budgeting; time value of money.
+Methods of appraising project profitability:
+Traditional methods: payback period, accounting rate of return.
+Modern methods: discounted cash flow method, net present value method, internal rate of return method, profitability index.
+
+Text books 
+1. Dr. A. R. Aryasri – Managerial Economics and Financial Analysis, TMH 2018, 2e.
+2. Dr. N. Appa Rao, Dr. P. Vijay Kumar: ‘Managerial Economics and Financial Analysis’, 
+Cengage Publications, New Delhi – 2012.  
+3.Management Science, Aryasri, Tata McGraw Hill, 2014.
+
+=======
+
+Course Name: Design and Analysis of Algorithms
+
+Units:
+
+Unit I: Introduction to Algorithms and Divide and Conquer
+
+Introduction: Algorithm definition, algorithm specification, performance analysis, performance measurement, and asymptotic notations.
+Divide and Conquer: General method, binary search, finding the maximum and minimum, quicksort.
+Unit II: The Greedy Method
+
+General Method: Principles and application.
+Problems:
+Knapsack problem.
+Single-source shortest path problem.
+Optimal storage on tapes problem.
+Optimal merge patterns problem.
+Unit III: Dynamic Programming
+
+General Method: Principles and application.
+Problems:
+0/1 Knapsack problem.
+Single-source shortest path (general weights).
+All pairs shortest paths problem.
+Traveling salesperson problem.
+String editing problem.
+Unit IV: Backtracking
+
+General Method: Principles and application.
+Problems:
+N-Queens problem.
+Sum of subsets problem.
+Graph coloring problem.
+Hamiltonian cycles problem.
+Unit V: Branch and Bound and NP-Hardness
+
+Branch and Bound: General method, FIFO branch-and-bound, LC branch-and-bound.
+Problems:
+0/1 Knapsack problem.
+Traveling salesperson problem.
+NP-Hard and NP-Complete: Basic concepts and Cook’s Theorem.
+
+Text Books 
+1. Ellis 
+Horowitz, Sartaj Sahni, Sanguthevar Rajasekaran, “Fundamentals of Computer
+Algorithms”, 2nd Edition, Universities Press. 
+=======
+
+Course Name: Deep Learning Lab
+
+Course Objectives:
+
+Develop practical skills to design, implement, and train deep learning systems.
+Learn fundamental techniques and tools to effectively train deep learning models.
+Gain hands-on experience with deep learning data types and model architectures.
+Course Units:
+
+Unit 1: Setup and Introduction
+
+Installation and setup of Python, Jupyter Notebook, and libraries such as TensorFlow, NumPy, Keras, Pandas, and Matplotlib.
+Unit 2: Multilayer Perceptron (MLP)
+
+Implement an MLP for regression (e.g., house price prediction).
+Fine-tune hyperparameters for optimal model performance.
+Implement an MLP for classification (e.g., heart disease prediction).
+Unit 3: Convolutional Neural Networks (CNNs)
+
+Build and train a CNN for image classification (e.g., dog/cat classification).
+Implement a CNN for object detection in images.
+Unit 4: Recurrent Neural Networks (RNNs)
+
+Implement an RNN for time series prediction.
+Develop a Long Short-Term Memory (LSTM) model for time series prediction.
+Build a Gated Recurrent Unit (GRU) model for time series prediction.
+Unit 5: Neural Machine Translation (NMT)
+
+Implement a Seq2Seq model for machine translation using Keras.
+Create an Encoder-Decoder RNN model for machine translation.
+
+=======
+
+Course Name: Cloud Computing Lab
+
+Course Objectives:
+
+Understand the theoretical foundation of computing and storage cloud environments.
+Learn methodologies and technologies to develop and deploy applications in cloud environments.
+Gain hands-on experience with IaaS and PaaS software to build cloud infrastructures and applications.
+Course Units:
+
+Unit 1: Basics of Virtualization
+
+Explore Virtual Machine Monitors (VMM).
+Create and manage virtual machines (VMs) using tools like VirtualBox.
+Set up networking and communication between VMs.
+Unit 2: Introduction to CloudSim
+
+Install and execute CloudSim for cloud simulation.
+Simulate a cloud data center and define network topology.
+Unit 3: Cloud Framework Simulation
+
+Create a data center (DC) in a simulated cloud environment.
+Define and manage tasks and VMs with specific characteristics.
+Execute and monitor tasks on VMs.
+Unit 4: Scalable and Dynamic Cloud Systems
+
+Develop scalable cloud entities for managing cloud systems.
+Implement and observe the behavior of dynamic entities in a cloud setup.
+Unit 5: Resource Allocation in Cloud Data Centers
+
+Experiment with different resource allocation policies.
+Analyze the effects of changing resource allocation policies.
+Unit 6: Power Management in Cloud Data Centers
+
+Set up a power-efficient data center.
+Study and apply various power-saving techniques.
+Unit 7: Commercial Cloud Frameworks
+
+Explore platforms like Amazon AWS and Elastic Cloud.
+Use Amazon Load Balancer for effective resource distribution.
+Practice creating and managing VMs and resource allocation in commercial cloud frameworks.
+
+
+ !!!! THIS IS SYLLABUS FOR THE VVIT CSM STUDENTS !!!!

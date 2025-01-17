@@ -10,295 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <!-- Add marked library for Markdown parsing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
-    <style>
-        /* Previous styles remain the same until .response-content */
-        :root {
-            --primary-red: #ffeded;
-            --primary-red-hover: #ffe0e0;
-            --accent-red: #ff4444;
-            --text-black: #000000;
-            --text-gray: #4a4a4a;
-            --white: #ffffff;
-            --border-light: #f0f0f0;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        body {
-            background-color: var(--primary-red);
-            color: var(--text-black);
-        }
-
-        .container {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        .sidebar {
-            width: 280px;
-            background-color: var(--white);
-            padding: 2rem;
-            border-right: 1px solid var(--border-light);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .main-content {
-            flex: 1;
-            max-width: 50rem;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: var(--text-black);
-            letter-spacing: -0.5px;
-        }
-
-        .header p {
-            font-size: 1.1rem;
-            color: var(--text-gray);
-            font-weight: 500;
-        }
-
-        .chat-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-            margin-bottom: 7rem;
-        }
-
-        .response-section {
-            background-color: var(--white);
-            border-radius: 1.25rem;
-            padding: 2rem;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-        }
-
-        .response-section:hover {
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Updated response-content styles */
-        .response-content {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--text-black);
-            font-weight: 450;
-        }
-
-        /* Add styles for markdown content */
-        .response-content table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-            background-color: var(--white);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .response-content th,
-        .response-content td {
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--border-light);
-            text-align: left;
-        }
-
-        .response-content th {
-            background-color: var(--primary-red);
-            font-weight: 600;
-        }
-
-        .response-content tr:nth-child(even) {
-            background-color: var(--primary-red);
-        }
-
-        .response-content code {
-            font-family: 'Consolas', 'Monaco', monospace;
-            padding: 0.2em 0.4em;
-            background-color: var(--primary-red);
-            border-radius: 0.3em;
-            font-size: 0.9em;
-        }
-
-        .response-content pre {
-            background-color: var(--primary-red);
-            padding: 1rem;
-            border-radius: 0.5rem;
-            overflow-x: auto;
-            margin: 1rem 0;
-        }
-
-        .response-content pre code {
-            background-color: transparent;
-            padding: 0;
-            border-radius: 0;
-        }
-
-        /* Rest of the previous styles */
-        .input-section {
-            position: fixed;
-            bottom: 0;
-            left: 280px;
-            right: 0;
-            background-color: var(--white);
-            padding: 2rem;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .textarea-wrapper {
-            max-width: 50rem;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        textarea {
-            width: 100%;
-            min-height: 60px;
-            max-height: 200px;
-            padding: 1.25rem;
-            padding-right: 4rem;
-            border: 2px solid var(--border-light);
-            border-radius: 1rem;
-            font-size: 1.1rem;
-            line-height: 1.5;
-            color: var(--text-black);
-            background-color: var(--white);
-            resize: none;
-            transition: var(--transition);
-            box-shadow: var(--shadow-sm);
-            font-weight: 450;
-        }
-
-        textarea:focus {
-            outline: none;
-            border-color: var(--accent-red);
-            box-shadow: 0 0 0 4px rgba(255, 68, 68, 0.1);
-        }
-
-        .send-button {
-            position: absolute;
-            right: 1rem;
-            bottom: 1rem;
-            background: var(--accent-red);
-            border: none;
-            color: var(--white);
-            cursor: pointer;
-            padding: 0.75rem;
-            border-radius: 0.75rem;
-            transition: var(--transition);
-        }
-
-        .send-button:hover {
-            transform: scale(1.05);
-            background-color: #ff3333;
-        }
-
-        .controls {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 2px solid var(--border-light);
-        }
-
-        .control-button {
-            background: var(--primary-red);
-            border: none;
-            color: var(--text-black);
-            padding: 0.75rem 1rem;
-            border-radius: 0.75rem;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .control-button:hover {
-            background-color: var(--primary-red-hover);
-        }
-
-        .loading {
-            display: none;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            padding: 2rem;
-        }
-
-        .loading.active {
-            display: flex;
-        }
-
-        .spinner {
-            width: 28px;
-            height: 28px;
-            border: 3px solid rgba(255, 68, 68, 0.1);
-            border-top-color: var(--accent-red);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        .toast {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            padding: 1rem 2rem;
-            background-color: var(--text-black);
-            color: var(--white);
-            border-radius: 1rem;
-            box-shadow: var(--shadow-lg);
-            opacity: 0;
-            transform: translateY(1rem);
-            transition: var(--transition);
-            font-weight: 500;
-        }
-
-        .toast.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        @media (max-width: 768px) {
-            .sidebar {
-                display: none;
-            }
-
-            .input-section {
-                left: 0;
-            }
-
-            .main-content {
-                padding: 2rem 1rem;
-            }
-
-            .header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <div class="container">
@@ -313,6 +25,15 @@
             <header class="header">
                 <h1>CSM Query System</h1>
                 <p>Get instant AI-powered insights and answers</p>
+                
+                <div class="demo-topics" style="display: flex; gap: 10px; padding-top: 10px; width: 100%;">
+                    <button class="control-button demo-button">Current Syllabus</button>
+                    <button class="control-button demo-button">Faculty and Timetable</button>
+                    <button class="control-button demo-button">3-2 Project Details and Timelines</button>
+                    <button class="control-button demo-button">Semester Calendar</button>
+                    <button class="control-button demo-button">Student Marks</button>
+                    <button class="control-button demo-button">Student Details</button>
+                </div>
             </header>
 
             <div class="chat-container">
@@ -346,11 +67,85 @@
                 </button>
             </div>
         </div>
+
+        <div class="user-profile-bottom">
+            <div class="profile-circle" id="profileCircle"></div>
+            <div class="profile-menu" id="profileMenu">
+                <div class="profile-menu-header">
+                    <div class="user-email" id="userEmail"><i></i></div>
+                    <div class="member-since" id="memberSince"></div>
+                    <div class="queries-info">
+                        Queries today: <span id="queryCount" class="highlight">0</span> / 50
+                    </div>
+                </div>
+                <ul class="profile-menu-items">
+                    <li>
+                        <a href="/logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="toast" id="toast"></div>
+    <div class="welcome-toast" id="welcomeToast"></div>
 
     <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+            // Set up profile circle with user's initials
+            const userEmail = '{{ user_data.email }}';
+            const initials = userEmail.split('@')[0].substring(0, 2);
+            document.getElementById('profileCircle').textContent = initials;
+            
+            // Set up profile menu content
+            document.getElementById('userEmail').textContent = userEmail;
+            document.getElementById('memberSince').textContent = 'Member since {{ user_data.member_since }}';
+            
+            // Show welcome message if first login
+            {% if user_data.first_login %}
+                const welcomeToast = document.getElementById('welcomeToast');
+                welcomeToast.textContent = `Welcome back, ${userEmail}!`;
+                welcomeToast.style.display = 'block';
+                setTimeout(() => {
+                    welcomeToast.style.display = 'none';
+                }, 5000);
+            {% endif %}
+
+        });
+
+        // Toggle profile menu
+        document.getElementById('profileCircle').addEventListener('click', function(e) {
+            const menu = document.getElementById('profileMenu');
+            menu.classList.toggle('active');
+            e.stopPropagation();
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const menu = document.getElementById('profileMenu');
+            if (!menu.contains(e.target) && !document.getElementById('profileCircle').contains(e.target)) {
+                menu.classList.remove('active');
+            }
+        });
+
+        // Update query count
+        function updateQueryCount() {
+            fetch('/query-count')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('queryCount').textContent = data.query_count;
+                })
+                .catch(error => console.error('Error fetching query count:', error));
+        }
+
         // Configure marked options
         marked.setOptions({
             highlight: function(code, lang) {
@@ -362,6 +157,93 @@
             breaks: true,
             gfm: true
         });
+
+        // New functions for enhanced features
+        function showChatHistory() {
+            const historyPanel = document.getElementById('chatHistoryPanel');
+            const savedPanel = document.getElementById('savedQueriesPanel');
+            savedPanel.style.display = 'none';
+            historyPanel.style.display = historyPanel.style.display === 'none' ? 'block' : 'none';
+            
+            // Fetch and display chat history
+            fetch('/chat-history')
+                .then(response => response.json())
+                .then(data => {
+                    const historyList = document.getElementById('chatHistoryList');
+                    historyList.innerHTML = data.history.map(item => `
+                        <div class="history-item">
+                            <div class="query">${item.query}</div>
+                            <div class="timestamp">${item.timestamp}</div>
+                        </div>
+                    `).join('');
+                })
+                .catch(error => console.error('Error fetching chat history:', error));
+        }
+
+        function showSavedQueries() {
+            const savedPanel = document.getElementById('savedQueriesPanel');
+            const historyPanel = document.getElementById('chatHistoryPanel');
+            historyPanel.style.display = 'none';
+            savedPanel.style.display = savedPanel.style.display === 'none' ? 'block' : 'none';
+            
+            // Fetch and display saved queries
+            fetch('/saved-queries')
+                .then(response => response.json())
+                .then(data => {
+                    const savedList = document.getElementById('savedQueriesList');
+                    savedList.innerHTML = data.saved.map(item => `
+                        <div class="saved-item">
+                            <div class="query">${item.query}</div>
+                            <div class="actions">
+                                <button onclick="useQuery('${item.query}')">Use</button>
+                                <button onclick="deleteQuery('${item.id}')">Delete</button>
+                            </div>
+                        </div>
+                    `).join('');
+                })
+                .catch(error => console.error('Error fetching saved queries:', error));
+        }
+
+        function saveQuery() {
+            const query = document.getElementById('queryText').value;
+            if (!query.trim()) return;
+
+            fetch('/save-query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ query })
+            })
+            .then(response => response.json())
+            .then(data => {
+                showToast('Query saved successfully!');
+            })
+            .catch(error => showToast('Failed to save query'));
+        }
+
+        function useQuery(query) {
+            document.getElementById('queryText').value = query;
+            autoResize(document.getElementById('queryText'));
+            document.getElementById('savedQueriesPanel').style.display = 'none';
+        }
+
+        function deleteQuery(id) {
+            fetch(`/delete-query/${id}`, { method: 'DELETE' })
+                .then(response => response.json())
+                .then(data => {
+                    showToast('Query deleted successfully!');
+                    showSavedQueries(); // Refresh the list
+                })
+                .catch(error => showToast('Failed to delete query'));
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            // Save theme preference
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        }
 
         // Auto-resize textarea
         function autoResize(textarea) {
@@ -390,18 +272,10 @@
 
         // Format response with markdown
         function formatResponse(text) {
-            // Handle table formatting
-            if (text.includes('|')) {
+            if (text.includes('|') || text.includes('```')) {
                 return marked.parse(text);
             }
-            
-            // Handle code blocks
-            if (text.includes('```')) {
-                return marked.parse(text);
-            }
-            
-            // Regular text
-            return text;
+            return marked.parse(text);
         }
 
         // Send query
@@ -410,50 +284,75 @@
             const queryText = textarea.value.trim();
             const responseText = document.getElementById('responseText');
             const loading = document.querySelector('.loading');
+            let retryCount = 0;
+            const maxRetries = 3;
 
-            if (!queryText) {
-                showToast('Please enter your question first');
-                return;
-            }
-
-            // Show loading state
-            responseText.style.opacity = '0.3';
-            loading.classList.add('active');
-
-            fetch('/query/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ query: queryText })
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
+            function attemptQuery() {
+                if (!queryText) {
+                    showToast('Please enter your question first');
+                    return;
                 }
-                return response.json();
-            })
-            .then(data => {
-                // Format the response with markdown
+
+                responseText.style.opacity = '0.3';
+                loading.classList.add('active');
+
+                fetch('/query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query: queryText })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        if (response.status === 429) {
+                            throw new Error('Daily query limit exceeded');
+                        }
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
                 responseText.innerHTML = formatResponse(data.result);
-                // Initialize syntax highlighting for code blocks
                 document.querySelectorAll('pre code').forEach((block) => {
                     hljs.highlightBlock(block);
                 });
                 textarea.value = '';
                 textarea.style.height = 'auto';
                 showToast('Response received successfully!');
-            })
-            .catch(error => {
-                responseText.textContent = `Error: ${error.message}`;
-                showToast('Failed to get response', 5000);
-            })
-            .finally(() => {
-                // Hide loading state
-                responseText.style.opacity = '1';
-                loading.classList.remove('active');
-            });
+
+                // Update query count and check remaining queries
+                fetch('/query-count')
+                    .then(response => response.json())
+                    .then(countData => {
+                        const queryCount = parseInt(countData.query_count);
+                        document.getElementById('queryCount').textContent = queryCount;
+                        
+                        // Show warning if less than 10 queries remaining
+                        if (50 - queryCount < 10) {
+                            showToast(`Warning: ${50 - queryCount} queries remaining for today`, 5000);
+                        }
+                    })
+                    .catch(error => console.error('Error updating query count:', error));
+                })
+                .catch(error => {
+                    if (retryCount < maxRetries && error.message !== 'Daily query limit exceeded') {
+                        retryCount++;
+                        setTimeout(attemptQuery, 1000 * retryCount);
+                        return;
+                    }
+                    responseText.textContent = `Error: ${error.message}`;
+                    showToast('Failed to get response: ' + error.message, 5000);
+                })
+                .finally(() => {
+                    responseText.style.opacity = '1';
+                    loading.classList.remove('active');
+                });
+            }
+
+            attemptQuery();
         }
+
 
         // Handle Enter key
         document.getElementById('queryText').addEventListener('keydown', function(e) {
@@ -462,6 +361,6 @@
                 sendQuery();
             }
         });
-    </script>
+</script>
 </body>
-</html>
+</html> 
