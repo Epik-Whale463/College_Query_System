@@ -12,7 +12,7 @@
 
 *An AI-powered query system designed exclusively for CSM students to access instant insights and answers about academic information.*
 
-18.212.197.132:8080/login
+<a href="http://18.212.197.132:8080/login" target="_blank"> <img src="https://img.shields.io/badge/🔗%20Launch%20CSM%20Query%20System-Click%20Here-brightgreen?style=for-the-badge" alt="Launch CSM Query System"> </a> </div>
 
 </div>
 
