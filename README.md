@@ -12,7 +12,7 @@
 
 *An AI-powered query system designed exclusively for CSM students to access instant insights and answers about academic information.*
 
-[🚀 Live Demo](18.212.197.132:8080/login) • [📖 Documentation](https://github.com/Epik-Whale463/College_Query_System/wiki) • [🐛 Report Bug](https://github.com/Epik-Whale463/College_Query_System/issues)
+ • [Live Demo](18.212.197.132:8080/login) • [🐛 Report Bug](https://github.com/Epik-Whale463/College_Query_System/issues)
 
 </div>
 
