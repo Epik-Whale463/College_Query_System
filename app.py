@@ -48,6 +48,7 @@ try:
     users_collection = db['users']
     queries_collection = db['queries']
     otps_collection = db['otps']
+    queries_collection = db['user_queries']
     # Test the connection
     client.server_info()
     logger.info("Successfully connected to MongoDB")
@@ -117,10 +118,9 @@ def verify_otp(email, otp, purpose):
         logger.error(f"Failed to verify OTP: {str(e)}")
         return False
 
-# Initialize RAG system
-dir_path = "./data"
+
 try:
-    initialize_rag(dir_path)
+    initialize_rag()
     logger.info("RAG system initialized successfully")
 except Exception as e:
     logger.error(f"Failed to initialize RAG system: {e}")
@@ -205,7 +205,7 @@ def register():
         # Store temporary user data in session
         session['temp_user'] = {
             'email': email,
-            'password': generate_password_hash(password),
+            'password': generate_password_hash(password, method='pbkdf2:sha256'),
             'gmail': gmail
         }
 
@@ -272,18 +272,38 @@ def login():
 
         user = users_collection.find_one({"email": email})
 
-        if user and check_password_hash(user['password'], password):
-            session.permanent = True
-            session['logged_in'] = True
-            session['user_email'] = email
-            session['first_login'] = True
+        if user:
+            try:
+                # Try to check password with current hash
+                password_valid = check_password_hash(user['password'], password)
+            except ValueError as e:
+                # Handle unsupported hash types (like scrypt)
+                if "unsupported hash type" in str(e):
+                    # Update the user's password with a supported hash
+                    new_hash = generate_password_hash(password, method='pbkdf2:sha256')
+                    users_collection.update_one(
+                        {"email": email},
+                        {"$set": {"password": new_hash}}
+                    )
+                    password_valid = True
+                else:
+                    password_valid = False
             
-            # Safely get created_at date with fallback
-            created_at = user.get('created_at', datetime.utcnow())
-            session['user_since'] = created_at.strftime("%B %d, %Y")
-            
-            flash(f'Welcome back, {email}!', 'success')
-            return redirect(url_for('home'))
+            if password_valid:
+                session.permanent = True
+                session['logged_in'] = True
+                session['user_email'] = email
+                session['first_login'] = True
+                
+                # Safely get created_at date with fallback
+                created_at = user.get('created_at', datetime.utcnow())
+                session['user_since'] = created_at.strftime("%B %d, %Y")
+                
+                flash(f'Welcome back, {email}!', 'success')
+                return redirect(url_for('home'))
+            else:
+                flash("Invalid email or password", "error")
+                return render_template("login.html")
         else:
             flash("Invalid email or password", "error")
             return render_template("login.html")
@@ -344,7 +364,7 @@ def user_query():
             })
             
             if query_entry:
-                if query_entry['count'] >= 50:
+                if query_entry['count'] >= 100:
                     logger.warning(f"Query limit exceeded for user: {user_email}")
                     return jsonify({"error": "Query limit exceeded for today."}), 429
                 
@@ -366,7 +386,15 @@ def user_query():
         query = data.get('query')
         result = query_rag(query)
         
-        return jsonify({"result": result})
+        # Store the query details in MongoDB
+        queries_collection.insert_one({
+            "email": user_email,
+            "query": query,
+            "timestamp": datetime.utcnow(),
+            "result": result
+        })
+        
+        return jsonify({"response": result})
         
     except Exception as e:
         logger.error(f"Error processing query: {str(e)}")
@@ -427,5 +455,5 @@ if __name__ == "__main__":
     app.run(
         host="0.0.0.0",  
         port=port,
-        debug=True
+        debug=False
     )

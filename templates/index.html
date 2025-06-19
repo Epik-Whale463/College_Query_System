@@ -11,28 +11,287 @@
     <!-- Add marked library for Markdown parsing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
     <link rel="stylesheet" href="../static/style.css">
+    <style>
+        /* Additional macOS specific styles */
+        .sidebar {
+            background-color: #f2f2f2;
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .sidebar-header {
+            padding: 1.5rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .sidebar-divider {
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 0.75rem 0;
+        }
+        
+        .sidebar-section {
+            padding: 0.75rem 1rem;
+            font-size: 0.8rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .toolbar {
+            background-color: rgba(247, 247, 247, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .mac-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .mac-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .mac-close {
+            background-color: #ff5f57;
+            border: 1px solid #e0443e;
+        }
+        
+        .mac-minimize {
+            background-color: #ffbd2e;
+            border: 1px solid #dea123;
+        }
+        
+        .mac-expand {
+            background-color: #28c941;
+            border: 1px solid #1aab29;
+        }
+        
+        .demo-topics {
+            display: flex;
+            gap: 10px;
+            padding-top: 15px;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .demo-button {
+            background: linear-gradient(to bottom, #fefefe, #f2f2f2);
+            border: 1px solid #d1d1d1;
+            color: #333;
+            font-size: 0.8rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+        
+        .demo-button:hover {
+            background: linear-gradient(to bottom, #f5f5f5, #e8e8e8);
+        }
+        
+        /* Improved response section */
+        .response-section {
+            border-radius: 0.75rem;
+            background-color: var(--secondary-bg);
+        }
+
+        /* Toast Message Styles */
+        .toast,
+        .welcome-toast {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 1rem 1.5rem;
+            box-shadow: var(--shadow-xl);
+            transform: translateX(400px);
+            transition: var(--transition);
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            max-width: 350px;
+            font-weight: 500;
+        }
+
+        .toast.show,
+        .welcome-toast.show {
+            transform: translateX(0);
+        }
+
+        .toast-success {
+            border-color: var(--success-color);
+            background: linear-gradient(135deg, rgba(104, 211, 145, 0.1), rgba(104, 211, 145, 0.05));
+            color: var(--success-color);
+        }
+
+        .toast-warning {
+            border-color: var(--warning-color);
+            background: linear-gradient(135deg, rgba(251, 211, 141, 0.1), rgba(251, 211, 141, 0.05));
+            color: var(--warning-color);
+        }
+
+        .toast-error {
+            border-color: var(--error-color);
+            background: linear-gradient(135deg, rgba(252, 129, 129, 0.1), rgba(252, 129, 129, 0.05));
+            color: var(--error-color);
+        }
+
+        .toast-info {
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(102, 126, 234, 0.05));
+            color: var(--primary-color);
+        }
+
+        /* Query Limit Warning Styles */
+        .query-limit-warning {
+            background: linear-gradient(135deg, var(--warning-color), #f6ad55);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Query Count Visual Feedback */
+        .count-warning {
+            color: var(--warning-color) !important;
+            font-weight: 700;
+            animation: glow-warning 2s ease-in-out infinite alternate;
+        }
+
+        .count-danger {
+            color: var(--error-color) !important;
+            font-weight: 700;
+            animation: glow-danger 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow-warning {
+            from { text-shadow: 0 0 5px var(--warning-color); }
+            to { text-shadow: 0 0 10px var(--warning-color), 0 0 15px var(--warning-color); }
+        }
+
+        @keyframes glow-danger {
+            from { text-shadow: 0 0 5px var(--error-color); }
+            to { text-shadow: 0 0 10px var(--error-color), 0 0 15px var(--error-color); }
+        }
+
+        /* Header with theme toggle */
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        
+        .header-content {
+            flex: 1;
+        }
+        
+        .theme-toggle-header {
+            margin-left: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle-header:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
-            <button class="control-button">
-                <i class="fas fa-home"></i>
-                Dashboard
+            <div class="sidebar-header">
+                <div class="mac-buttons">
+                    <div class="mac-button mac-close"></div>
+                    <div class="mac-button mac-minimize"></div>
+                    <div class="mac-button mac-expand"></div>
+                </div>
+                <div class="logo">
+                    <i class="fas fa-cube"></i>
+                    CSM Query
+                </div>
+            </div>
+            
+            <div class="sidebar-section">Navigation</div>
+            <button class="control-button" onclick="showChatHistory()">
+                <i class="fas fa-history"></i>
+                History
+            </button>
+            
+            <div class="sidebar-divider"></div>
+            
+            <div class="sidebar-section">Settings</div>
+            <button class="control-button" onclick="toggleTheme()" id="themeToggle">
+                <i class="fas fa-moon" id="themeIcon"></i>
+                <span id="themeText">Dark Mode</span>
             </button>
         </aside>
 
         <div class="main-content">
+            <div class="toolbar">
+                <div></div>
+                <div></div>
+            </div>
+            
             <header class="header">
-                <h1>CSM Query System</h1>
-                <p>Get instant AI-powered insights and answers</p>
+                <div class="header-top">
+                    <div class="header-content">
+                        <h1>CSM Query System</h1>
+                        <p>Get instant AI-powered insights and answers</p>
+                    </div>
+                    <button class="control-button theme-toggle-header" onclick="toggleTheme()" title="Toggle Theme">
+                        <i class="fas fa-moon" id="toolbarThemeIcon"></i>
+                    </button>
+                </div>
                 
-                <div class="demo-topics" style="display: flex; gap: 10px; padding-top: 10px; width: 100%;">
-                    <button class="control-button demo-button">Current Syllabus</button>
-                    <button class="control-button demo-button">Faculty and Timetable</button>
-                    <button class="control-button demo-button">3-2 Project Details and Timelines</button>
-                    <button class="control-button demo-button">Semester Calendar</button>
-                    <button class="control-button demo-button">Student Marks</button>
-                    <button class="control-button demo-button">Student Details</button>
+                <div class="demo-topics">
+                    <button class="demo-button" onclick="setDemoQuery('Tell me about the current syllabus for CSE 3-2 semester')">Current Syllabus</button>
+                    <button class="demo-button" onclick="setDemoQuery('Show me the faculty schedule and timetable information')">Faculty and Timetable</button>
+                    <button class="demo-button" onclick="setDemoQuery('What are the 3-2 project details and important timelines?')">3-2 Project Details and Timelines</button>
+                    <button class="demo-button" onclick="setDemoQuery('Show me the semester calendar and important dates')">Semester Calendar</button>
+                    <button class="demo-button" onclick="setDemoQuery('Display student marks and academic performance data')">Student Marks</button>
+                    <button class="demo-button" onclick="setDemoQuery('Provide student details and enrollment information')">Student Details</button>
                 </div>
             </header>
 
@@ -75,7 +334,7 @@
                     <div class="user-email" id="userEmail"><i></i></div>
                     <div class="member-since" id="memberSince"></div>
                     <div class="queries-info">
-                        Queries today: <span id="queryCount" class="highlight">0</span> / 50
+                        Queries today: <span id="queryCount" class="highlight">0</span> / <span id="queryLimit" class="highlight">100</span>
                     </div>
                 </div>
                 <ul class="profile-menu-items">
@@ -94,11 +353,46 @@
     <div class="welcome-toast" id="welcomeToast"></div>
 
     <script>
+        // Toggle dark/light theme with icon synchronization
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            const themeText = document.getElementById('themeText');
+            const toolbarThemeIcon = document.getElementById('toolbarThemeIcon');
+            
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            
+            // Update sidebar theme button
+            if (isDarkMode) {
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = 'Light Mode';
+                toolbarThemeIcon.className = 'fas fa-sun';
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                themeText.textContent = 'Dark Mode';
+                toolbarThemeIcon.className = 'fas fa-moon';
+            }
+            
+            // Save preference
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        }
 
         document.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('themeIcon');
+            const themeText = document.getElementById('themeText');
+            const toolbarThemeIcon = document.getElementById('toolbarThemeIcon');
+            
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = 'Light Mode';
+                toolbarThemeIcon.className = 'fas fa-sun';
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                themeText.textContent = 'Dark Mode';
+                toolbarThemeIcon.className = 'fas fa-moon';
             }
             // Set up profile circle with user's initials
             const userEmail = '{{ user_data.email }}';
@@ -110,14 +404,15 @@
             document.getElementById('memberSince').textContent = 'Member since {{ user_data.member_since }}';
             
             // Show welcome message if first login
-            {% if user_data.first_login %}
+            const isFirstLogin = {% if user_data.first_login %}true{% else %}false{% endif %};
+            if (isFirstLogin) {
                 const welcomeToast = document.getElementById('welcomeToast');
                 welcomeToast.textContent = `Welcome back, ${userEmail}!`;
                 welcomeToast.style.display = 'block';
                 setTimeout(() => {
                     welcomeToast.style.display = 'none';
                 }, 5000);
-            {% endif %}
+            }
 
         });
 
@@ -136,12 +431,38 @@
             }
         });
 
-        // Update query count
+        // Update query count with visual feedback
         function updateQueryCount() {
             fetch('/query-count')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('queryCount').textContent = data.query_count;
+                    const queryCount = data.query_count || 0;
+                    const queryLimit = data.query_limit || 100;
+                    
+                    document.getElementById('queryCount').textContent = queryCount;
+                    document.getElementById('queryLimit').textContent = queryLimit;
+                    
+                    // Update profile menu count if it exists
+                    const profileCount = document.getElementById('queryCountProfile');
+                    if (profileCount) {
+                        profileCount.textContent = queryCount;
+                    }
+                    
+                    // Visual feedback based on usage
+                    const usagePercentage = (queryCount / queryLimit) * 100;
+                    const countElement = document.getElementById('queryCount');
+                    
+                    // Remove existing classes
+                    countElement.classList.remove('count-warning', 'count-danger');
+                    
+                    if (usagePercentage >= 90) {
+                        countElement.classList.add('count-danger');
+                        if (usagePercentage >= 95) {
+                            showToast(`Query limit almost reached: ${queryCount}/${queryLimit}`, 'warning');
+                        }
+                    } else if (usagePercentage >= 75) {
+                        countElement.classList.add('count-warning');
+                    }
                 })
                 .catch(error => console.error('Error fetching query count:', error));
         }
@@ -158,209 +479,129 @@
             gfm: true
         });
 
-        // New functions for enhanced features
+        // Functions for enhanced features
         function showChatHistory() {
-            const historyPanel = document.getElementById('chatHistoryPanel');
-            const savedPanel = document.getElementById('savedQueriesPanel');
-            savedPanel.style.display = 'none';
-            historyPanel.style.display = historyPanel.style.display === 'none' ? 'block' : 'none';
-            
-            // Fetch and display chat history
-            fetch('/chat-history')
-                .then(response => response.json())
-                .then(data => {
-                    const historyList = document.getElementById('chatHistoryList');
-                    historyList.innerHTML = data.history.map(item => `
-                        <div class="history-item">
-                            <div class="query">${item.query}</div>
-                            <div class="timestamp">${item.timestamp}</div>
-                        </div>
-                    `).join('');
-                })
-                .catch(error => console.error('Error fetching chat history:', error));
+            // Placeholder for chat history functionality
+            showToast('Chat history feature coming soon!', 'info');
         }
 
-        function showSavedQueries() {
-            const savedPanel = document.getElementById('savedQueriesPanel');
-            const historyPanel = document.getElementById('chatHistoryPanel');
-            historyPanel.style.display = 'none';
-            savedPanel.style.display = savedPanel.style.display === 'none' ? 'block' : 'none';
-            
-            // Fetch and display saved queries
-            fetch('/saved-queries')
-                .then(response => response.json())
-                .then(data => {
-                    const savedList = document.getElementById('savedQueriesList');
-                    savedList.innerHTML = data.saved.map(item => `
-                        <div class="saved-item">
-                            <div class="query">${item.query}</div>
-                            <div class="actions">
-                                <button onclick="useQuery('${item.query}')">Use</button>
-                                <button onclick="deleteQuery('${item.id}')">Delete</button>
-                            </div>
-                        </div>
-                    `).join('');
-                })
-                .catch(error => console.error('Error fetching saved queries:', error));
-        }
-
-        function saveQuery() {
-            const query = document.getElementById('queryText').value;
-            if (!query.trim()) return;
-
-            fetch('/save-query', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ query })
-            })
-            .then(response => response.json())
-            .then(data => {
-                showToast('Query saved successfully!');
-            })
-            .catch(error => showToast('Failed to save query'));
-        }
-
-        function useQuery(query) {
-            document.getElementById('queryText').value = query;
-            autoResize(document.getElementById('queryText'));
-            document.getElementById('savedQueriesPanel').style.display = 'none';
-        }
-
-        function deleteQuery(id) {
-            fetch(`/delete-query/${id}`, { method: 'DELETE' })
-                .then(response => response.json())
-                .then(data => {
-                    showToast('Query deleted successfully!');
-                    showSavedQueries(); // Refresh the list
-                })
-                .catch(error => showToast('Failed to delete query'));
-        }
-
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-            // Save theme preference
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        // Set demo query in textarea
+        function setDemoQuery(query) {
+            const textarea = document.getElementById('queryText');
+            textarea.value = query;
+            autoResize(textarea);
+            textarea.focus();
+            showToast('Demo query loaded! Click send to execute.', 'success');
         }
 
         // Auto-resize textarea
         function autoResize(textarea) {
             textarea.style.height = 'auto';
-            textarea.style.height = textarea.scrollHeight + 'px';
+            textarea.style.height = (textarea.scrollHeight) + 'px';
         }
 
-        // Toast notification
-        function showToast(message, duration = 3000) {
+        // Show toast message with different types
+        function showToast(message, type = 'info') {
             const toast = document.getElementById('toast');
             toast.textContent = message;
-            toast.classList.add('show');
             
+            // Remove existing type classes
+            toast.classList.remove('toast-info', 'toast-success', 'toast-warning', 'toast-error');
+            
+            // Add appropriate type class
+            switch(type) {
+                case 'success':
+                    toast.classList.add('toast-success');
+                    break;
+                case 'warning':
+                    toast.classList.add('toast-warning');
+                    break;
+                case 'error':
+                    toast.classList.add('toast-error');
+                    break;
+                default:
+                    toast.classList.add('toast-info');
+            }
+            
+            toast.classList.add('show');
             setTimeout(() => {
                 toast.classList.remove('show');
-            }, duration);
+            }, type === 'warning' || type === 'error' ? 5000 : 3000);
         }
 
-        // Copy response
+        // Send query to backend
+        function sendQuery() {
+            const queryText = document.getElementById('queryText').value;
+            if (!queryText.trim()) return;
+            
+            // Display loading state
+            document.getElementById('responseText').style.display = 'none';
+            document.querySelector('.loading').classList.add('active');
+            document.querySelector('.controls').style.display = 'none';
+            
+            fetch('/query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ query: queryText })
+            })
+            .then(response => {
+                if (response.status === 429) {
+                    throw new Error('Query limit exceeded. Please try again tomorrow or contact admin for increased capacity.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('responseText').innerHTML = marked.parse(data.response);
+                document.getElementById('responseText').style.display = 'block';
+                document.querySelector('.loading').classList.remove('active');
+                document.querySelector('.controls').style.display = 'flex';
+                document.getElementById('queryText').value = '';
+                autoResize(document.getElementById('queryText'));
+                hljs.highlightAll();
+                updateQueryCount();
+            })
+            .catch(error => {
+                let errorMessage = 'An error occurred. Please try again.';
+                if (error.message.includes('Query limit exceeded')) {
+                    errorMessage = error.message;
+                    showToast(errorMessage, 'warning');
+                } else {
+                    showToast('Request failed. Please try again.', 'error');
+                }
+                
+                document.getElementById('responseText').innerHTML = `
+                    <div style="text-align: center; padding: 2rem; color: var(--error-color);">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                        <p>${errorMessage}</p>
+                    </div>
+                `;
+                document.getElementById('responseText').style.display = 'block';
+                document.querySelector('.loading').classList.remove('active');
+                document.querySelector('.controls').style.display = 'flex';
+                console.error('Error:', error);
+            });
+        }
+
+        // Copy response to clipboard
         function copyResponse() {
-            const responseText = document.getElementById('responseText').textContent;
+            const responseText = document.getElementById('responseText').innerText;
             navigator.clipboard.writeText(responseText)
-                .then(() => showToast('Response copied to clipboard!'))
+                .then(() => showToast('Response copied to clipboard'))
                 .catch(err => showToast('Failed to copy response'));
         }
 
-        // Format response with markdown
-        function formatResponse(text) {
-            if (text.includes('|') || text.includes('```')) {
-                return marked.parse(text);
-            }
-            return marked.parse(text);
-        }
-
-        // Send query
-        function sendQuery() {
-            const textarea = document.getElementById('queryText');
-            const queryText = textarea.value.trim();
-            const responseText = document.getElementById('responseText');
-            const loading = document.querySelector('.loading');
-            let retryCount = 0;
-            const maxRetries = 3;
-
-            function attemptQuery() {
-                if (!queryText) {
-                    showToast('Please enter your question first');
-                    return;
-                }
-
-                responseText.style.opacity = '0.3';
-                loading.classList.add('active');
-
-                fetch('/query', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ query: queryText })
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        if (response.status === 429) {
-                            throw new Error('Daily query limit exceeded');
-                        }
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                responseText.innerHTML = formatResponse(data.result);
-                document.querySelectorAll('pre code').forEach((block) => {
-                    hljs.highlightBlock(block);
-                });
-                textarea.value = '';
-                textarea.style.height = 'auto';
-                showToast('Response received successfully!');
-
-                // Update query count and check remaining queries
-                fetch('/query-count')
-                    .then(response => response.json())
-                    .then(countData => {
-                        const queryCount = parseInt(countData.query_count);
-                        document.getElementById('queryCount').textContent = queryCount;
-                        
-                        // Show warning if less than 10 queries remaining
-                        if (50 - queryCount < 10) {
-                            showToast(`Warning: ${50 - queryCount} queries remaining for today`, 5000);
-                        }
-                    })
-                    .catch(error => console.error('Error updating query count:', error));
-                })
-                .catch(error => {
-                    if (retryCount < maxRetries && error.message !== 'Daily query limit exceeded') {
-                        retryCount++;
-                        setTimeout(attemptQuery, 1000 * retryCount);
-                        return;
-                    }
-                    responseText.textContent = `Error: ${error.message}`;
-                    showToast('Failed to get response: ' + error.message, 5000);
-                })
-                .finally(() => {
-                    responseText.style.opacity = '1';
-                    loading.classList.remove('active');
-                });
-            }
-
-            attemptQuery();
-        }
-
-
-        // Handle Enter key
+        // Handle Enter key in textarea
         document.getElementById('queryText').addEventListener('keydown', function(e) {
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
                 sendQuery();
             }
         });
-</script>
+
+        // Initialize
+        updateQueryCount();
+    </script>
 </body>
-</html> 
+</html>

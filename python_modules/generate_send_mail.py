@@ -12,9 +12,10 @@ logger = logging.getLogger(__name__)
 
 # Load environment variables
 load_dotenv()
-APP_PASSWORD_GMAIL = os.getenv("APP_PASSWORD_GMAIL")
-EMAIL_SENDER_ADDRESS = os.getenv("EMAIL_SENDER_ADDRESS")
-GEMINI_API_KEY = os.getenv("GOOGLE_API_KEY")
+GEMINI_API_KEY = "AIzaSyBWiOOTwv1xF7N1jt2U8GP74aPTN6jQ4ZY"
+PHI_API_KEY = "phi-54SCROX5jEW0_oCzGD002hIKyHKdnuBYYaA9Xhh4NB0"
+APP_PASSWORD_GMAIL = "hvjj ulxd gmvw zvlu"
+EMAIL_SENDER_ADDRESS = "gcloudsignup@gmail.com"
 
 if not all([APP_PASSWORD_GMAIL, EMAIL_SENDER_ADDRESS, GEMINI_API_KEY]):
     raise ValueError("Missing required environment variables for email functionality")

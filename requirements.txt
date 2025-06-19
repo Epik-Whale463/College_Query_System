@@ -11,4 +11,4 @@ unstructured
 flask_wtf
 pymongo
 phidata
-python-magic
+llama_index
